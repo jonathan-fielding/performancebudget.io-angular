@@ -27,12 +27,15 @@
             </heading> -->
 
             <div class="container">
-                <p>
+                <p class="query">
                     I want my site to load in 
 
-                    <input type="number" name="loadtime" id="loadtime" ng-model="loadtime"> 
+                    <span>
+                        <input type="number" name="loadtime" id="loadtime" ng-model="loadtime" class="loadtime"> 
+                        seconds
+                    </span>
 
-                    seconds on a 
+                    on a 
 
                     <select name="location" id="connection" ng-model="connection">
                         <option value="625" selected="">Cable (5Mbps)</option>
@@ -114,8 +117,8 @@
             s.parentNode.insertBefore(wf, s);
           })(); 
         </script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/angular.min.js"></script>
         <script src="scripts/main.js"></script>
     </body>
 </html>

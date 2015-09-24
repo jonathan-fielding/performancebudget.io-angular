@@ -32,25 +32,60 @@ body {
 	margin: 0 auto;
 }
 
+.global-header {
+	background: #BA6E6E;
+	overflow: hidden;
+	margin-bottom: 20px;
+
+	@media only screen and (min-width: 768px) {
+		margin-bottom: 40px;
+	}
+}
+
 h1 {
-	color: $primaryColor;
-	@include font-size(40);
+	color: $backgroundColor;
+	@include font-size(30);
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
 	font-weight: 800;
+	margin-top: 10vh;
+	margin-bottom: 0px;
+
+	@media only screen and (min-width: 768px) {
+		@include font-size(40);
+		margin-top: 20vh;
+	}
 }
 
 .subtitle {
-	color: $primaryColor;
-	@include font-size(20);
-	text-transform: uppercase;
+	color: $backgroundColor;
+	@include font-size(18);
+	text-transform: capitalize;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
+	margin-bottom: 10vh;
+
+	@media only screen and (min-width: 768px) {
+		@include font-size(20);
+		margin-bottom: 20vh;
+	}
 }
 
+p.query {
+	line-height: 30px;
+	@include font-size(18);
+
+	span {
+	    display: inline-block;
+	}
+}
 
 .small {
-	@include font-size(10);
+	@include font-size(14);
+}
+
+.loadtime {
+	width: 50px;
 }
 
 //
