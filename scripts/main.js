@@ -20,4 +20,7 @@ app.controller('BudgetCtrl', function($scope){
 			$scope.budget = loadTime * connectionSpeed;
 		}
 	};
-})
+
+	$scope.$watch('loadtime', $scope.calculate);
+	$scope.$watch('connection', $scope.calculate);
+});
