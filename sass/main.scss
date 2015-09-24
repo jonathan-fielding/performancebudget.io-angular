@@ -98,6 +98,19 @@ p.query {
 	width: 50px;
 }
 
+.btn {
+	border-radius: 3px;
+	background: #BA6E6E;
+	padding: 10px 20px;
+	border: 0px;
+	color: $backgroundColor;
+	@include font-size(20);
+
+	&:hover {
+		background: darken(#BA6E6E, 20)
+	}
+}
+
 //
 // Helpers - Before components as some components override the helpers used
 //

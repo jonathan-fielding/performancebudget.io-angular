@@ -490,6 +490,20 @@ p.query span {
 	width: 50px;
 }
 
+.btn {
+	border-radius: 3px;
+	background: #BA6E6E;
+	padding: 10px 20px;
+	border: 0px;
+	color: #F0E7D8;
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.btn:hover {
+	background: #833f3f;
+}
+
 /*
  * Standard clearfix for clearing floats
  */
