@@ -36,10 +36,18 @@ body {
 	background: #BA6E6E;
 	overflow: hidden;
 	margin-bottom: 20px;
+	padding: 10vh 0;
+	transition: all 0.5s;
 
 	@media only screen and (min-width: 768px) {
 		margin-bottom: 40px;
+		padding: 20vh 0;
 	}
+
+	&.slim {
+		padding: 5vh 0;
+	}
+
 }
 
 h1 {
@@ -48,12 +56,11 @@ h1 {
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
 	font-weight: 800;
-	margin-top: 10vh;
-	margin-bottom: 0px;
+	margin-bottom: 0;
+	margin-top: 0;
 
 	@media only screen and (min-width: 768px) and (min-height: 480px) {
 		@include font-size(40);
-		margin-top: 20vh;
 	}
 }
 
@@ -63,11 +70,10 @@ h1 {
 	text-transform: capitalize;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
-	margin-bottom: 10vh;
+	margin-bottom: 0;
 
 	@media only screen and (min-width: 768px) and (min-height: 480px) {
 		@include font-size(20);
-		margin-bottom: 20vh;
 	}
 }
 

@@ -5,14 +5,17 @@ app.controller('BudgetCtrl', function($scope){
 	$scope.budget = 0;
 	$scope.connection = "";
 	$scope.error = "";
+	$scope.step = 1;
 
 	$scope.calculate = function() {
 		var connectionSpeed = parseFloat($scope.connection);
 		var loadTime = parseFloat($scope.loadtime);
 
+		$scope.step = 2;
+
 		if(isNaN(loadTime) || isNaN(loadTime)) {
 			$scope.budget = 0;
-			$scope.error 
+			$scope.error = 'Please enter';
 		}
 
 		$scope.budget = loadTime * connectionSpeed;

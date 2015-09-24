@@ -442,6 +442,12 @@ body {
 	background: #BA6E6E;
 	overflow: hidden;
 	margin-bottom: 20px;
+	padding: 10vh 0;
+	transition: all 0.5s;
+}
+
+.global-header.slim {
+	padding: 5vh 0;
 }
 
 h1 {
@@ -451,8 +457,8 @@ h1 {
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
 	font-weight: 800;
-	margin-top: 10vh;
-	margin-bottom: 0px;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .subtitle {
@@ -462,7 +468,7 @@ h1 {
 	text-transform: capitalize;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
-	margin-bottom: 10vh;
+	margin-bottom: 0;
 }
 
 p.query {
@@ -590,6 +596,7 @@ p.query span {
 
 .global-header {
 	margin-bottom: 40px;
+	padding: 20vh 0;
 }
 
 p.query {
@@ -604,13 +611,11 @@ p.query {
 h1 {
 	font-size: 40px;
 	font-size: 2.5rem;
-	margin-top: 20vh;
 }
 
 .subtitle {
 	font-size: 20px;
 	font-size: 1.25rem;
-	margin-bottom: 20vh;
 }
 
 }
