@@ -78,6 +78,10 @@ p.query {
 	span {
 	    display: inline-block;
 	}
+
+	@media only screen and (min-width: 768px) {
+		@include font-size(22);
+	}
 }
 
 .small {
