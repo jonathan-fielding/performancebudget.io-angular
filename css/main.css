@@ -504,6 +504,16 @@ p.query span {
 	background: #833f3f;
 }
 
+.slide-list {
+	padding: 0;
+	margin: 0;
+}
+
+.slide-list li {
+	padding: 0;
+	list-style: none;
+}
+
 rzslider span.rz-pointer {
 	background-color: #BA6E6E;
 }
@@ -620,6 +630,12 @@ rzslider span.rz-pointer {
 p.query {
 	font-size: 22px;
 	font-size: 1.375rem;
+}
+
+.slide-list li {
+	width: 33.33%;
+	float: left;
+	padding: 0 10px;
 }
 
 }

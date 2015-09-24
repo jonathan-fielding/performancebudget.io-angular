@@ -111,6 +111,22 @@ p.query {
 	}
 }
 
+.slide-list {
+	padding: 0;
+	margin: 0;
+
+	li {
+		padding: 0;
+		list-style: none;
+
+		@media only screen and (min-width: 768px) {
+			width: 33.33%;
+			float: left;
+			padding: 0 10px;
+		}
+	}
+}
+
 rzslider span.rz-pointer {
 	background-color: #BA6E6E;
 }
