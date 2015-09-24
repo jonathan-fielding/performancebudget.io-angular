@@ -504,6 +504,10 @@ p.query span {
 	background: #833f3f;
 }
 
+rzslider span.rz-pointer {
+	background-color: #BA6E6E;
+}
+
 /*
  * Standard clearfix for clearing floats
  */

@@ -10,6 +10,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body ng-app="app" ng-controller="BudgetCtrl">
@@ -21,7 +22,7 @@
             </div>
         </header>
 
-        <section>
+        <section  ng-class="{'hidden': step === 2}">
             <!-- <heading>
                 <h2>Step 1: Determine your total budget</h2>
             </heading> -->
@@ -53,16 +54,12 @@
                 </p>
 
                 <button ng-click="calculate()" class="btn">Calculate</button>
-
-                <p ng-class="{'hidden': budget == 0}" class="hidden budget">
-                    Your performance budget is <span>{{budget}}KB</span>
-                </p>
             </div>
         </section>
-<!-- 
-        <section>
+
+        <section class="hidden"  ng-class="{'hidden': step === 1}">
             <heading>
-                <h2>Step 2: Break budget into Categories</h2>
+                <h2>Your performance budget is <span>{{budget}}KB</span></h2>
             </heading>
 
             <div class="container">
@@ -70,32 +67,32 @@
                 <ul>
                     <li>
                         <label>HTML</label>
-                        <input type="number" />
+                        <rzslider rz-slider-model="cssSlider" rz-slider-floor="0" rz-slider-ceil="450"></rzslider>
                     </li>
                     <li>
                         <label>CSS</label>
-                        <input type="number" />
+                        <rzslider rz-slider-model="cssSlider" rz-slider-floor="0" rz-slider-ceil="450"></rzslider>
                     </li>
                     <li>
                         <label>JavaScript</label>
-                        <input type="number" />
+                        <rzslider rz-slider-model="cssSlider" rz-slider-floor="0" rz-slider-ceil="450"></rzslider>
                     </li>
                     <li>
                         <label>Images</label>
-                        <input type="number" />
+                        <rzslider rz-slider-model="cssSlider" rz-slider-floor="0" rz-slider-ceil="450"></rzslider>
                     </li>
                     <li>
                         <label>Video</label>
-                        <input type="number" />
+                        <rzslider rz-slider-model="cssSlider" rz-slider-floor="0" rz-slider-ceil="450"></rzslider>
                     </li>
                     <li>
                         <label>Fonts</label>
-                        <input type="number" />
+                        <rzslider rz-slider-model="cssSlider" rz-slider-floor="0" rz-slider-ceil="450"></rzslider>
                     </li>
 
                 </ul>
             </div>
-        </section> -->
+        </section>
 
         <footer class="global-footer">
             <div class="container">
@@ -119,6 +116,7 @@
         </script>
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/angular.min.js"></script>
+        <script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>
         <script src="scripts/main.js"></script>
     </body>
 </html>

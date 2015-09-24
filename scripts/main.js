@@ -1,4 +1,4 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['rzModule']);
 
 app.controller('BudgetCtrl', function($scope){
 	$scope.loadtime = "";
@@ -6,6 +6,7 @@ app.controller('BudgetCtrl', function($scope){
 	$scope.connection = "";
 	$scope.error = "";
 	$scope.step = 1;
+	$scope.cssSlider = 0;
 
 	$scope.calculate = function() {
 		var connectionSpeed = parseFloat($scope.connection);
