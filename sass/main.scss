@@ -1,0 +1,59 @@
+//
+// Variables
+//
+
+@import "base/variables";
+
+//
+// Mixins
+//
+
+@import "mixins/clearfix";
+@import "mixins/fontsize";
+
+// 
+// Base styles
+//
+
+@import "base/normalize";
+
+//
+// Site Styles
+//
+
+body {
+	background: $backgroundColor;
+	text-align: center;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: $primaryColor;
+	@include font-size(40);
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	font-weight: 800;
+}
+
+.subtitle {
+	color: $primaryColor;
+	@include font-size(20);
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.small {
+	@include font-size(10);
+}
+
+//
+// Helpers - Before components as some components override the helpers used
+//
+@import "base/helpers";
