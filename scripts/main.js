@@ -13,11 +13,14 @@ app.controller('BudgetCtrl', function($scope){
 
 		$scope.step = 2;
 
-		if(isNaN(loadTime) || isNaN(loadTime)) {
+		if(isNaN(connectionSpeed) || isNaN(loadTime)) {
 			$scope.budget = 0;
 			$scope.error = 'Please enter';
+		} else {
+			$scope.budget = loadTime * connectionSpeed;
 		}
-
-		$scope.budget = loadTime * connectionSpeed;
 	};
-})
+
+	$scope.$watch('loadtime', $scope.calculate);
+	$scope.$watch('connection', $scope.calculate);
+});
