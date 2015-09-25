@@ -216,6 +216,11 @@ p.warning {
 	color: orange;
 }
 
+.total-budget {
+	@include font-size(30);
+	margin: -10px 0 20px;
+}
+
 //
 // Helpers - Before components as some components override the helpers used
 //

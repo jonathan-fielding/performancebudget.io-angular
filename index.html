@@ -23,9 +23,6 @@
         </header>
 
         <section  ng-class="{'hidden': step !== 1}">
-            <!-- <heading>
-                <h2>Step 1: Determine your total budget</h2>
-            </heading> -->
 
             <div class="container">
                 <p class="query">
@@ -108,6 +105,9 @@
             </heading>
 
             <div class="container">
+                <h3>Total Budget</h3>
+                <p class="total-budget">{{total}}KB</p>
+
                 <h3>Budget by asset type</h3>
 
                 <div class="performance-budget">

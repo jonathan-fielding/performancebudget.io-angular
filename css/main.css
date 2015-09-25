@@ -592,6 +592,12 @@ p.warning {
 	color: orange;
 }
 
+.total-budget {
+	font-size: 30px;
+	font-size: 1.875rem;
+	margin: -10px 0 20px;
+}
+
 /*
  * Standard clearfix for clearing floats
  */
