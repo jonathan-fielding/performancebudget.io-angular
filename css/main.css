@@ -510,12 +510,31 @@ p.query span {
 }
 
 .slide-list li {
-	padding: 0;
+	padding: 0 0 20px;
 	list-style: none;
 }
 
 .slide-list label {
 	padding-bottom: 20px;
+}
+
+.performance-budget {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto 40px;
+}
+
+.performance-budget th {
+	width: 16.66%;
+	background: #BA6E6E;
+	font-family: 'Lato', sans-serif;
+	color: #F0E7D8;
+}
+
+.performance-budget td,
+.performance-budget th {
+	padding: 20px 0;
+	border: 1px solid #BA6E6E;
 }
 
 rzslider span.rz-pointer {
@@ -639,7 +658,7 @@ p.query {
 .slide-list li {
 	width: 33.33%;
 	float: left;
-	padding: 0 10px;
+	padding: 0 10px 20px;
 }
 
 }

@@ -44,7 +44,7 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 	};
 
 	$scope.finish = function() {
-
+		$scope.step = 3;
 	};
 
 	function setDefaults (budget) {

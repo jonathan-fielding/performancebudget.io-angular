@@ -116,18 +116,36 @@ p.query {
 	margin: 0;
 
 	li {
-		padding: 0;
+		padding: 0 0 20px;
 		list-style: none;
 
 		@media only screen and (min-width: 768px) {
 			width: 33.33%;
 			float: left;
-			padding: 0 10px;
+			padding: 0 10px 20px;
 		}
 	}
 
 	label {
 		padding-bottom: 20px;
+	}
+}
+
+.performance-budget {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto 40px;
+
+	th {
+		width: 16.66%;
+		background: #BA6E6E;
+		font-family: 'Lato', sans-serif;
+		color: $backgroundColor;
+	}
+
+	td, th {
+		padding: 20px 0;
+		border: 1px solid #BA6E6E;
 	}
 }
 

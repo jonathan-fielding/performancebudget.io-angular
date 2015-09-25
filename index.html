@@ -15,14 +15,14 @@
     </head>
     <body ng-app="app" ng-controller="BudgetCtrl">
      
-        <header class="global-header" ng-class="{'slim': step === 2}">
+        <header class="global-header" ng-class="{'slim': step !== 1}">
             <div class="container">
                 <h1>Performance Budget</h1>
                 <p class="subtitle">Calculate your performance budget</p>
             </div>
         </header>
 
-        <section  ng-class="{'hidden': step === 2}">
+        <section  ng-class="{'hidden': step !== 1}">
             <!-- <heading>
                 <h2>Step 1: Determine your total budget</h2>
             </heading> -->
@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <section class="hidden"  ng-class="{'hidden': step === 1}">
+        <section class="hidden"  ng-class="{'hidden': step !== 2}">
             <heading>
                 <h2>Your performance budget is <span>{{budget}}KB</span></h2>
             </heading>
@@ -95,6 +95,33 @@
                 </ul>
 
                 <button ng-click="finish()" class="btn">Finish</button>
+            </div>
+        </section>
+
+        <section class="hidden"  ng-class="{'hidden': step !== 3}">
+             <heading>
+                <h2>Your performance budget breakdown</h2>
+            </heading>
+
+            <div class="container">
+                <table class="performance-budget">
+                    <tr>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                        <th>JavaScript</th>
+                        <th>Images</th>
+                        <th>Video</th>
+                        <th>Fonts</th>
+                    </tr>
+                    <tr>
+                        <td>{{htmlSlider}}KB</td>
+                        <td>{{cssSlider}}KB</td>
+                        <td>{{jsSlider}}KB</td>
+                        <td>{{imagesSlider}}KB</td>
+                        <td>{{videoSlider}}KB</td>
+                        <td>{{fontsSlider}}KB</td>
+                    </tr>
+                </table>
             </div>
         </section>
 
