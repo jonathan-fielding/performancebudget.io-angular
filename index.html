@@ -53,6 +53,8 @@
                     connection.
                 </p>
 
+                <p class="hidden" ng-class="{'hidden': error.length === 0}">{{error}}</p>
+
                 <button ng-click="calculate()" class="btn">Calculate</button>
             </div>
         </section>
@@ -91,6 +93,8 @@
                     </li>
 
                 </ul>
+
+                <button ng-click="finish()" class="btn">Finish</button>
             </div>
         </section>
 

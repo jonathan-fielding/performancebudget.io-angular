@@ -514,6 +514,10 @@ p.query span {
 	list-style: none;
 }
 
+.slide-list label {
+	padding-bottom: 20px;
+}
+
 rzslider span.rz-pointer {
 	background-color: #BA6E6E;
 }

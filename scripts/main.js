@@ -1,3 +1,12 @@
+var AVERAGE_PERCENTS = {
+	css: 3.25,
+	html: 2.5,
+	js: 16.5,
+	images: 63,
+	video: 9.75,
+	fonts: 5 
+};
+
 var app = angular.module('app', ['rzModule']);
 
 app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
@@ -24,6 +33,8 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 			$scope.step = 2;
 			$scope.budget = loadTime * connectionSpeed;
 
+			setDefaults($scope.budget);
+
 			$timeout(function(){
 				$rootScope.$broadcast('rzSliderForceRender');
 			}, 10)
@@ -31,4 +42,17 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 			
 		}
 	};
-})
+
+	$scope.finish = function() {
+
+	};
+
+	function setDefaults (budget) {
+		$scope.cssSlider = Math.round((budget * AVERAGE_PERCENTS.css)) / 100;
+		$scope.htmlSlider = Math.round((budget * AVERAGE_PERCENTS.html)) / 100;
+		$scope.jsSlider = Math.round((budget * AVERAGE_PERCENTS.js)) / 100;
+		$scope.imagesSlider = Math.round((budget * AVERAGE_PERCENTS.images)) / 100;
+		$scope.videoSlider = Math.round((budget * AVERAGE_PERCENTS.video)) / 100;
+		$scope.fontsSlider = Math.round((budget * AVERAGE_PERCENTS.fonts)) / 100;
+	}
+});
