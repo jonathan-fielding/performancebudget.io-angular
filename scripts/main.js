@@ -56,3 +56,19 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 		$scope.fontsSlider = Math.round((budget * AVERAGE_PERCENTS.fonts)) / 100;
 	}
 });
+
+app.directive('numberMask', function() {
+    return {
+        restrict: 'A',
+        link: function($scope, element, attrs) {
+            element.on('keydown', function(e){
+            	var code = (e.which) ? e.which : e.keyCode;
+			    
+			    if (code > 31 && (code < 48 || code > 57)) {
+			      e.preventDefault();
+			    }
+
+            });
+        }
+    }
+});
