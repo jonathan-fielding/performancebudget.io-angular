@@ -111,8 +111,9 @@ app.directive('numberMask', function() {
         link: function($scope, element, attrs) {
             element.on('keydown', function(e){
             	var code = (e.which) ? e.which : e.keyCode;
-			    
-			    if (code > 31 && (code < 48 || code > 57)) {
+			    var value = this.value;
+
+			    if (code > 31 && (code < 48 || code > 57) && (code !== 190 || value.match(/\./g))) {
 			    	e.preventDefault();
 			    }
 
