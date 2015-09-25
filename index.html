@@ -104,24 +104,33 @@
             </heading>
 
             <div class="container">
-                <table class="performance-budget">
-                    <tr>
-                        <th>HTML</th>
-                        <th>CSS</th>
-                        <th>JavaScript</th>
-                        <th>Images</th>
-                        <th>Video</th>
-                        <th>Fonts</th>
-                    </tr>
-                    <tr>
-                        <td>{{htmlSlider}}KB</td>
-                        <td>{{cssSlider}}KB</td>
-                        <td>{{jsSlider}}KB</td>
-                        <td>{{imagesSlider}}KB</td>
-                        <td>{{videoSlider}}KB</td>
-                        <td>{{fontsSlider}}KB</td>
-                    </tr>
-                </table>
+                <div class="performance-budget">
+                    <table>
+                        <tr>
+                            <th>HTML</th>
+                            <th>CSS</th>
+                            <th>JavaScript</th>
+                        </tr>
+                        <tr>
+                            <td>{{htmlSlider}}KB</td>
+                            <td>{{cssSlider}}KB</td>
+                            <td>{{jsSlider}}KB</td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <th>Images</th>
+                            <th>Video</th>
+                            <th>Fonts</th>
+                        </tr>
+                        <tr>
+                            <td>{{imagesSlider}}KB</td>
+                            <td>{{videoSlider}}KB</td>
+                            <td>{{fontsSlider}}KB</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
 

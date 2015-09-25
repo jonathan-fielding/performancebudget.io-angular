@@ -48,12 +48,14 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 	};
 
 	function setDefaults (budget) {
-		$scope.cssSlider = Math.round((budget * AVERAGE_PERCENTS.css)) / 100;
-		$scope.htmlSlider = Math.round((budget * AVERAGE_PERCENTS.html)) / 100;
-		$scope.jsSlider = Math.round((budget * AVERAGE_PERCENTS.js)) / 100;
-		$scope.imagesSlider = Math.round((budget * AVERAGE_PERCENTS.images)) / 100;
-		$scope.videoSlider = Math.round((budget * AVERAGE_PERCENTS.video)) / 100;
-		$scope.fontsSlider = Math.round((budget * AVERAGE_PERCENTS.fonts)) / 100;
+		$scope.cssSlider = Math.round((budget * AVERAGE_PERCENTS.css) / 100);
+		$scope.htmlSlider = Math.round((budget * AVERAGE_PERCENTS.html) / 100);
+		$scope.jsSlider = Math.round((budget * AVERAGE_PERCENTS.js) / 100); 
+		$scope.videoSlider = Math.round((budget * AVERAGE_PERCENTS.video) / 100);
+		$scope.fontsSlider = Math.round((budget * AVERAGE_PERCENTS.fonts) / 100);
+
+
+		$scope.imagesSlider = budget - $scope.cssSlider - $scope.htmlSlider - $scope.jsSlider - $scope.videoSlider - $scope.fontsSlider;
 	}
 });
 
@@ -65,7 +67,7 @@ app.directive('numberMask', function() {
             	var code = (e.which) ? e.which : e.keyCode;
 			    
 			    if (code > 31 && (code < 48 || code > 57)) {
-			      e.preventDefault();
+			    	e.preventDefault();
 			    }
 
             });

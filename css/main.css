@@ -521,13 +521,18 @@ p.query span {
 }
 
 .performance-budget {
+	overflow: hidden;
+	margin: 0 auto 40px;
 	width: 100%;
 	max-width: 600px;
-	margin: 0 auto 40px;
+}
+
+.performance-budget table {
+	width: 100%;
 }
 
 .performance-budget th {
-	width: 16.66%;
+	width: 33.333%;
 	background: #BA6E6E;
 	font-family: 'Lato', sans-serif;
 	color: #F0E7D8;
@@ -677,6 +682,11 @@ p.query {
 	width: 33.33%;
 	float: left;
 	padding: 0 10px 20px;
+}
+
+.performance-budget table {
+	width: 50%;
+	float: left;
 }
 
 }
