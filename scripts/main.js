@@ -27,7 +27,7 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 		var loadTime = parseFloat($scope.loadtime);
 
 		if(isNaN(connectionSpeed) || isNaN(loadTime)) {
-			$scope.error = 'Please enter ';
+			$scope.error = 'Please enter both the number of second and select a connection type';
 		}
 		else {
 			$scope.step = 2;

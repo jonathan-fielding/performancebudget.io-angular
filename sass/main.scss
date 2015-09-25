@@ -167,6 +167,10 @@ rzslider span.rz-pointer.rz-active:after {
 	background-color: lighten(#BA6E6E, 30);
 }
 
+p.error {
+	color: red;
+}
+
 //
 // Helpers - Before components as some components override the helpers used
 //

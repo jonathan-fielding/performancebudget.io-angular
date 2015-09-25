@@ -555,6 +555,10 @@ rzslider span.rz-pointer.rz-active:after {
 	background-color: #ebd6d6;
 }
 
+p.error {
+	color: red;
+}
+
 /*
  * Standard clearfix for clearing floats
  */
