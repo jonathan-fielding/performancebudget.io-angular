@@ -52,16 +52,14 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 			$scope.error = 'Please enter both the number of second and select a connection type';
 		}
 		else {
-			$scope.step = 2;
 			$scope.budget = loadTime * connectionSpeed;
-
+			$scope.total = $scope.budget;
 			setDefaults($scope.budget);
+			$scope.step = 2;
 
 			$timeout(function(){
 				$rootScope.$broadcast('rzSliderForceRender');
-			}, 10)
-
-			
+			}, 10)			
 		}
 	};
 
@@ -70,14 +68,23 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 		$scope.step = 3;
 	};
 
+	$scope.$watch('cssSlider', updateTotal);
+	$scope.$watch('htmlSlider', updateTotal);
+	$scope.$watch('jsSlider', updateTotal);
+	$scope.$watch('videoSlider', updateTotal);
+	$scope.$watch('fontsSlider', updateTotal);
+	$scope.$watch('imagesSlider', updateTotal);
+
+	function updateTotal(newValue, oldValue) {
+		$scope.total = $scope.cssSlider + $scope.htmlSlider + $scope.jsSlider + $scope.videoSlider + $scope.fontsSlider + $scope.imagesSlider;
+	}
+
 	function setDefaults (budget) {
 		$scope.cssSlider = Math.round((budget * AVERAGE_PERCENTS.css) / 100);
 		$scope.htmlSlider = Math.round((budget * AVERAGE_PERCENTS.html) / 100);
 		$scope.jsSlider = Math.round((budget * AVERAGE_PERCENTS.js) / 100); 
 		$scope.videoSlider = Math.round((budget * AVERAGE_PERCENTS.video) / 100);
 		$scope.fontsSlider = Math.round((budget * AVERAGE_PERCENTS.fonts) / 100);
-
-
 		$scope.imagesSlider = budget - $scope.cssSlider - $scope.htmlSlider - $scope.jsSlider - $scope.videoSlider - $scope.fontsSlider;
 	}
 

@@ -588,6 +588,10 @@ p.error {
 	color: red;
 }
 
+p.warning {
+	color: orange;
+}
+
 /*
  * Standard clearfix for clearing floats
  */
