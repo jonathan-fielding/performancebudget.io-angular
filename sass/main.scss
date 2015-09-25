@@ -128,6 +128,7 @@ p.query {
 
 	label {
 		padding-bottom: 20px;
+		display: block;
 	}
 }
 
@@ -151,6 +152,18 @@ p.query {
 
 rzslider span.rz-pointer {
 	background-color: #BA6E6E;
+}
+
+rzslider span.rz-bar {
+	background-color: lighten(#BA6E6E, 30);
+}
+
+.rz-pointer + .rz-bubble.rz-limit {
+	left: 0px;
+}
+
+rzslider span.rz-pointer.rz-active:after {
+	background-color: lighten(#BA6E6E, 30);
 }
 
 //

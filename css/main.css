@@ -516,6 +516,7 @@ p.query span {
 
 .slide-list label {
 	padding-bottom: 20px;
+	display: block;
 }
 
 .performance-budget {
@@ -539,6 +540,18 @@ p.query span {
 
 rzslider span.rz-pointer {
 	background-color: #BA6E6E;
+}
+
+rzslider span.rz-bar {
+	background-color: #ebd6d6;
+}
+
+.rz-pointer + .rz-bubble.rz-limit {
+	left: 0px;
+}
+
+rzslider span.rz-pointer.rz-active:after {
+	background-color: #ebd6d6;
 }
 
 /*
