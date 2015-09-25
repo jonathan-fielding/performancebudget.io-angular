@@ -544,6 +544,30 @@ p.query span {
 	border: 1px solid #BA6E6E;
 }
 
+.load-time {
+	overflow: hidden;
+	margin: 0 auto 40px;
+	width: 100%;
+	max-width: 600px;
+}
+
+.load-time table {
+	width: 100%;
+}
+
+.load-time th {
+	background: #BA6E6E;
+	font-family: 'Lato', sans-serif;
+	color: #F0E7D8;
+}
+
+.load-time td,
+.load-time th {
+	width: 50%;
+	padding: 20px 0;
+	border: 1px solid #BA6E6E;
+}
+
 rzslider span.rz-pointer {
 	background-color: #BA6E6E;
 }

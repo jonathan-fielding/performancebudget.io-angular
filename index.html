@@ -104,6 +104,8 @@
             </heading>
 
             <div class="container">
+                <h3>Budget by asset type</h3>
+
                 <div class="performance-budget">
                     <table>
                         <tr>
@@ -128,6 +130,53 @@
                             <td>{{imagesSlider}}KB</td>
                             <td>{{videoSlider}}KB</td>
                             <td>{{fontsSlider}}KB</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h3>Estimated load times</h3>
+
+                <div class="load-time">
+                    <table>
+                        <tr>
+                            <th>Connection Type</th>
+                            <th>Time (seconds)</th>
+                        </tr>
+                        <tr>
+                            <th>Mobile 2G - Slow (35 Kbps)</td>
+                            <td>{{mobile2gSlow}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>56K Dial-Up (49Kbps)</td>
+                            <td>{{dialup}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>Mobile 2G - Fast (150 Kbps)</td>
+                            <td>{{mobile2g}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>Mobile Edge (240 Kbps)</td>
+                            <td>{{mobileEdge}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>Mobile 3G - Slow (780 Kbps)</td>
+                            <td>{{mobile3gSlow}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>DSL (1.5Mbps)</td>
+                            <td>{{dsl}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>Mobile 3G - Fast (1.6 Mbps)</td>
+                            <td>{{mobile3gFast}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>Cable (5Mbps)</td>
+                            <td>{{cable}} secs</td>
+                        </tr>
+                        <tr>
+                            <th>FIOS (20Mbps)</td>
+                            <td>{{fios}} secs</td>
                         </tr>
                     </table>
                 </div>

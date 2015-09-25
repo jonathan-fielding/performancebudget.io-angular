@@ -7,6 +7,18 @@ var AVERAGE_PERCENTS = {
 	fonts: 5 
 };
 
+var CONNECTION_SPEEDS = {
+	mobile2gSlow: 4.375,
+	dialup: 7,
+	mobile2g: 18.75,
+	mobileEdge: 30, 
+	mobile3gSlow: 97.5, 
+	dsl: 187.5,
+	mobile3gFast: 200,
+	cable: 625, 
+	fios: 2500
+};
+
 var app = angular.module('app', ['rzModule']);
 
 app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
@@ -21,6 +33,16 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 	$scope.imagesSlider = 0;
 	$scope.videoSlider = 0;
 	$scope.fontsSlider = 0;
+
+	$scope.mobile2gSlow = 0;
+	$scope.dialup = 0;
+	$scope.mobile2g = 0;
+	$scope.mobileEdge = 0;
+	$scope.mobile3gSlow = 0;
+	$scope.dsl = 0;
+	$scope.mobile3gFast = 0;
+	$scope.cable = 0;
+	$scope.fios = 0;
 
 	$scope.calculate = function() {
 		var connectionSpeed = parseFloat($scope.connection);
@@ -44,6 +66,7 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 	};
 
 	$scope.finish = function() {
+		calculateEstimates($scope.budget);
 		$scope.step = 3;
 	};
 
@@ -56,6 +79,22 @@ app.controller('BudgetCtrl', function($scope, $rootScope, $timeout){
 
 
 		$scope.imagesSlider = budget - $scope.cssSlider - $scope.htmlSlider - $scope.jsSlider - $scope.videoSlider - $scope.fontsSlider;
+	}
+
+	function calculateEstimates(budget) {
+		$scope.mobile2gSlow = round2dp(budget / CONNECTION_SPEEDS.mobile2gSlow);
+		$scope.dialup = round2dp(budget / CONNECTION_SPEEDS.dialup);
+		$scope.mobile2g = round2dp(budget / CONNECTION_SPEEDS.mobile2g);
+		$scope.mobileEdge = round2dp(budget / CONNECTION_SPEEDS.mobileEdge);
+		$scope.mobile3gSlow = round2dp(budget / CONNECTION_SPEEDS.mobile3gSlow);
+		$scope.dsl = round2dp(budget / CONNECTION_SPEEDS.dsl);
+		$scope.mobile3gFast = round2dp(budget / CONNECTION_SPEEDS.mobile3gFast);
+		$scope.cable = round2dp(budget / CONNECTION_SPEEDS.cable);
+		$scope.fios = round2dp(budget / CONNECTION_SPEEDS.fios);
+	}
+
+	function round2dp(number) {
+		return Math.round(number * 100) / 100;
 	}
 });
 
