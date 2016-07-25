@@ -1,9 +1,13 @@
 var gulp = require('gulp');
-var cssTasks = require('./tasks/css.task');
+var tasks = require('gulp-standard-tasks')(gulp);
 
-gulp.task('css', cssTasks.development);
-gulp.task('min-css', cssTasks.production);
-gulp.task('default', ['css']);
+gulp.task('sass-prod', tasks.css({
+	src: 'sass/main.scss',
+	dest: 'css',
+	mode: 'prod'
+}));
+
+gulp.task('default', ['sass-prod']);
 gulp.task('watch', function(){
-    gulp.watch('sass/**/*.scss', ['css']);
+    gulp.watch('sass/**/*.scss', ['sass-prod']);
 });
