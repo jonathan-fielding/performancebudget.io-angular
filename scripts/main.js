@@ -12,12 +12,14 @@ var CONNECTION_SPEEDS = {
 	dialup: 7,
 	mobile2g: 18.75,
 	mobileEdge: 30, 
-	mobile3gSlow: 97.5, 
+	mobile3gSlow: 96, 
 	dsl: 187.5,
 	mobile3gFast: 200,
 	cable: 625, 
 	fios: 2500
 };
+
+console.log(CONNECTION_SPEEDS)
 
 var app = angular.module('app', ['rzModule']);
 
